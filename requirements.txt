@@ -1,0 +1,18 @@
+# Core Backend
+
+# Audio & ML
+tensorflow
+librosa
+numpy
+scikit-learn
+soundfile
+pydub
+
+# For handling audio files
+ffmpeg-python
+
+# For recieving audio uploads
+Pillow
+
+# Communication APIs
+twilio
