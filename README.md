@@ -1,5 +1,5 @@
 # SanoAwaj
-Sano Awaj is our hackathon project. It is a web app that helps woman and underprivileged users report and prevent harrasment in a safe and easy way. It gives users tools to protect themselves, report abuse anonymously, and alert authorities or trusted people during emergencies.
+Sano Awaj is our hackathon project. It is a web app that helps woman and underprivileged users report and prevent harrasment in a safe and easy way.
 
 # Plan of Attack for team member (shiva chaudhary)
 ### step 1: preparing dataset from kaggle
@@ -14,7 +14,7 @@ Sano Awaj is our hackathon project. It is a web app that helps woman and underpr
 ### step 2: Preprocessing Code 
 ***NOTE : we will be using librosa, tensorflow, keras for audio preprocessing and model training***
 - CNN model will be used for image recognition for finding pattern. Eventhough, I'm working with audio, I need to convert audio into visual features like MFCCs(Mel Frequency Cepstral Coefficients) or spectogram and these are just 2D images
-- If I want to detect pattern overtime and full sentences or emotion tone oveer 5 - 10 secs
+- If I want to detect pattern overtime and full sentences or emotion tone oveer 5 - 10 second then i need to use RNN and LSTM
 
 ### step 3: Django as Backend Setup
 ***NOTE : I don't know Django. I need to learn in just ***2 Days***.*** 
