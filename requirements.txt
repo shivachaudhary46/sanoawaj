@@ -7,6 +7,8 @@ numpy
 scikit-learn
 soundfile
 pydub
+pandas
+
 
 # For handling audio files
 ffmpeg-python
