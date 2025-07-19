@@ -24,6 +24,7 @@ ENV/
 *.wav
 *.tsv
 *.csv
+*.png
 
 nepali/
 ravdess/
