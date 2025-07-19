@@ -205,13 +205,13 @@ Epoch 100/100
 176/176 ━━━━━━━━━━━━━━━━━━━━ 2s 6ms/step - accuracy: 0.9342 - loss: 0.2120
 Accuracy of our model on test data:  93.58108043670654
 ```
-<img src="assets/Screenshot 2025-07-19 at 13.49.45.png" alt="loss and accuracy">
+<img src="assets/loss_accuracy.png" alt="loss and accuracy">
 
 ***This is my predicted labels Vs actual labels***
-<img src="assets/Screenshot 2025-07-19 at 13.50.17.png" alt="labels">
+<img src="assets/labels.png" alt="labels">
 
 ***This is my confusion matrix of actual tested value vs predicted value***
-<img src="assets/Screenshot 2025-07-19 at 13.50.03.png" alt="Confusion Matrix">
+<img src="assets/confusion_matrix.png" alt="Confusion Matrix">
 
 ***This is a classification report as metrics***
 ```
