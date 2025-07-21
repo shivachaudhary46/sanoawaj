@@ -25,6 +25,8 @@ ENV/
 *.tsv
 *.csv
 
+.gitignore
+
 nepali/
 ravdess/
 Converted_Separately/

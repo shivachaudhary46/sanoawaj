@@ -21,3 +21,8 @@ twilio
 
 # for backend 
 flask
+
+# 
+SpeechRecognition 
+Pyaudio
+pyttsx3
