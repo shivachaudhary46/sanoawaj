@@ -25,9 +25,10 @@ ENV/
 *.tsv
 *.csv
 
-.gitignore
+*.gitignore
 
 nepali/
 ravdess/
 Converted_Separately/
 ne_np_female/
+recordings/
