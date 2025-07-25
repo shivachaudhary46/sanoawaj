@@ -60,10 +60,3 @@ def get_features(path):
     result = np.vstack((result, res4))
 
     return result
-
-def invert_prediction(model, X_test, y_test, encoder): 
-    pred_test = model.predict(X_test)
-    y_pred = encoder.inverse_transform(pred_test)
-    y_test_inv = encoder.inverse_transform(y_test)
-    
-    return y_pred, y_test_inv

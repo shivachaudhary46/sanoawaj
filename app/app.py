@@ -1,14 +1,12 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 import time
-import queue
 from datetime import datetime
 import os
-import pandas as pd
-import nbimporter
-from get_features import get_features, invert_prediction
+from get_features import get_features
 from keras.models import load_model
 import numpy as np
 import joblib
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -37,12 +35,13 @@ def prediction(audio_path):
         features_scaled = scaler.transform(features)
         features_scaled = np.expand_dims(features_scaled, axis=2)
 
-        encoder = joblib.load(encoder.pkl)
-        # model prediction 
-        y_pred, y_test = invert_prediction(model, features_scaled, y_test, encoder)
+        df = pd.DataFrame(emotion_classes, columns=['Emotions'])
+        y_pred = model.predict(features_scaled)
+        y_pred_index = emotion_classes[np.mean(np.argmax(y_pred, axis=1)).astype('int')]
 
-        print(f"prediction emotion: {y_pred, y_test}")
-        return prediction
+        print("prediction:", y_pred_index)
+        return y_pred_index
+        
     except Exception as e:
         print("Error during prediction:", e)
 
