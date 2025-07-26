@@ -22,9 +22,16 @@ class audio_recorder:
         self.format = pyaudio.paInt16  # 16-bit audio
         self.is_recording = False
         self.audio_data = []
+        self.should_stop = False
         
         # Initialize PyAudio
         self.audio = pyaudio.PyAudio()
+
+    def stop_recording(self):
+
+        self.should_stop = True
+        self.is_recording = False
+
 
     def continuous_5_second_recording(self, max_recordings=None, interval=0, output_dir="recordings"):
         '''
@@ -49,6 +56,10 @@ class audio_recorder:
         
         try:
             while max_recordings is None or recording_count < max_recordings:
+
+                if self.should_stop:
+                    break
+
                 # Generate filename
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 filename = os.path.join(output_dir, f"audio_5sec_{timestamp}.wav")
